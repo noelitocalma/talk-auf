@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Basic Web Development</title>
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+		<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/app.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <style>
+      .reveal section img {
+        margin: 15px 0px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+      }
+      .reveal pre code {
+  			max-height: none;
+  		}
+  		h1, h2, h3, h4 {
+  			color: #00aeef !important;
+  			line-height: 1.2em !important;
+  		}
+  		gCode {
+  			color: #18CB18;
+  			font-family: monospace;
+  		}
+      fieldset.inputs {
+        margin-bottom: 10px;
+        text-align: left;
+      }
+      fieldset.inputs label,
+      ul.list {
+        font-size: 28px;
+      }
+    </style>
+
+	</head>
+	<body id="body">
+		<div class="toro-io">
+		 <a href="https://www.toro.io/" target="_blank" class="toro-io-heading">
+			 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 4547 1225.844">
+				 <path id="T" class="cls-1" d="M221.157,153.293H-7.539V1H615.193V153.293H386.5V751.742H221.157V153.293Z" transform="translate(0 -0.156)"/>
+				 <path id="O" class="cls-1" d="M1164.92,2.393c-0.23-.067-0.43-0.163-0.66-0.227-0.33-.094-0.65-0.125-0.99-0.211-1.03-.258-2.04-0.56-3.08-0.814l-0.03.155c-14.46-2.705-27.35,1.616-29.74,10.573-2.6,9.755,8.18,21.2,24.09,25.712v0.151c112.87,39.818,193.8,147.315,193.8,273.868,0,160.453-130.01,290.53-290.38,290.53S767.551,472.053,767.551,311.6c0-126.553,80.935-234.054,193.8-273.872l-0.06-.094,0-.026c15.721-4.454,26.329-15.666,23.723-25.258-2.629-9.687-17.74-14.023-33.746-9.672a49.2,49.2,0,0,0-4.886,1.653C779.068,50.389,666.2,197.239,666.2,370.327v2.111c0,209.667,163.222,379.3,390.7,379.3,227.45,0,392.77-171.737,392.77-381.411v-2.1C1449.66,192.884,1335.34,45.909,1164.92,2.393Z" transform="translate(0 -0.156)"/>
+				 <path id="R" class="cls-1" d="M1530.66,0.837h343.13c95.44,0,169.43,26.816,218.75,76.148,41.81,41.83,64.33,100.807,64.33,171.594v2.149c0,121.19-65.4,197.331-160.83,232.721l183.35,268.125H1986.38L1825.53,511.335H1695.79V751.574H1530.66V0.837Zm332.41,364.649c80.42,0,126.53-42.9,126.53-106.176v-2.142c0-70.787-49.32-107.262-129.75-107.262H1695.79v215.58h167.28Z" transform="translate(0 -0.156)"/>
+				 <path id="O-2" data-name="O" class="cls-1" d="M2747.54,2.744c-0.22-.067-0.42-0.163-0.65-0.227-0.34-.095-0.66-0.125-0.99-0.212-1.03-.257-2.04-0.56-3.08-0.813l-0.03.155c-14.46-2.7-27.33,1.615-29.72,10.567-2.6,9.75,8.17,21.193,24.07,25.7v0.151c112.8,39.8,193.69,147.232,193.69,273.713,0,160.361-129.93,290.363-290.2,290.363s-290.2-130-290.2-290.363c0-126.481,80.88-233.921,193.68-273.716l-0.06-.095V37.937c15.71-4.451,26.31-15.657,23.7-25.243-2.62-9.681-17.72-14.015-33.72-9.666a48.739,48.739,0,0,0-4.88,1.652c-167.21,46.032-280.02,192.8-280.02,365.787v2.11c0,209.547,163.12,379.083,390.45,379.083,227.31,0,392.53-171.639,392.53-381.193v-2.1C3032.11,193.125,2917.86,46.234,2747.54,2.744Z" transform="translate(0 -0.156)"/>
+				 <circle id="_." data-name="." class="cls-2" cx="3190.91" cy="670.938" r="81.25"/>
+				 <rect id="I" class="cls-2" x="3338.84" y="0.188" width="166.66" height="750"/>
+				 <path id="O-3" data-name="O" class="cls-1" d="M4077,2.744c-0.23-.067-0.43-0.163-0.65-0.227-0.34-.095-0.66-0.125-1-0.212-1.03-.257-2.04-0.56-3.08-0.813l-0.02.155c-14.46-2.7-27.34,1.615-29.72,10.567-2.61,9.75,8.17,21.193,24.07,25.7v0.151c112.8,39.8,193.68,147.232,193.68,273.713,0,160.361-129.93,290.363-290.2,290.363s-290.2-130-290.2-290.363c0-126.481,80.89-233.921,193.69-273.716l-0.06-.095-0.01-.026c15.71-4.451,26.32-15.657,23.71-25.243-2.63-9.681-17.73-14.015-33.72-9.666a48.931,48.931,0,0,0-4.89,1.652c-167.21,46.032-280.01,192.8-280.01,365.787v2.11c0,209.547,163.12,379.083,390.45,379.083,227.31,0,392.53-171.639,392.53-381.193v-2.1C4361.57,193.125,4247.32,46.234,4077,2.744Z" transform="translate(0 -0.156)"/>
+				 <path id="TM" class="cls-1" d="M4412.19,14.787h-23.61V0.161h64.55V14.787h-23.61V79.256h-17.33V14.787Zm49.94-14.626h24.38l18.43,54.4h0.24l17.42-54.4h24.39v79.1h-16.23V23.2h-0.22l-19.3,56.051h-13.36l-19.3-55.495h-0.22V79.256h-16.23V0.161Z" transform="translate(0 -0.156)"/>
+			 </svg>
+		 </a><!-- end of toro-io-heading -->
+	 </div><!-- end of .toro-io watermark -->
+	 <div class="reveal">
+     <!--
+       Heads Up: Use this comment as a reference when working on your slide.
+     -->
+     <div class="slides">
+
+       <!-- Hello, Let's introduce yourself. -->
+       <section data-state="blur-on">
+         <h2>Monthly Seminar Workshop on Web Development Track 1</h2>
+         <h4>(Basic Web Development - HTML5, CSS3, Javascript)</h4>
+         <p>
+           HTML5 Presentation Framework powered by
+           <a href="https://github.com/hakimel/reveal.js">reveal.js</a>
+         </p>
+         <p>
+           <small>Presented By Noelito L. Calma</small><br>
+           <a href="https://github.com/zoiii" target="_blank"><i class="ion-social-github"></i></a> &nbsp;
+           <a href="https://www.facebook.com/zoiiicalma" target="_blank"><i class="ion-social-facebook"></i></a> &nbsp;
+         </p>
+       </section>
+
+       <section>
+         <section>
+           <h3>Part 1 </h3>
+           <h2>Introduction to HTML5 & CSS3</h2>
+         </section>
+          <section>
+						<img src="assets/html5.png" alt="">
+          </section>
+
+          <section>
+            <h3>What is New in HTML5?</h3>
+          </section>
+
+          <section>
+            <p>1. The DOCTYPE declaration for HTML5 is very simple:</p>
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+&lt;!DOCTYPE html>
+</code>
+</pre>
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+  /* HTML 4 */
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+</code>
+</pre>
+          </section>
+
+          <section>
+        <p>2. The character encoding (charset) declaration is also very simple:</p>
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+&lt;meta charset="UTF-8">
+</code>
+</pre>
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+  /* HTML 4 */
+&lt;meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+</code>
+</pre>
+          </section>
+          <section>
+          <p>HTML5 Example</p>
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;title>Title of the document</title>
+  &lt;/head>
+
+  &lt;body>
+    Content of the document......
+  &lt;/body>
+&lt;/html>
+</code>
+</pre>
+<small>http://www.w3schools.com/html/html5_intro.asp</small>
+          </section>
+          <section>
+            <p>NEW HTML5 Elements</p>
+            <ul>
+              <li>New semantic elements like <gcode>&lt;header>, &lt;footer>, &lt;article></gcode>, and <gcode>&lt;section></gcode>.</li>
+              <li>New attributes of form elements like <gcode>number, date, time, calendar</gcode>, and <gcode>range</gcode>.</li>
+              <li>New graphic elements: <gcode>&lt;svg></gcode> and <gcode>&lt;canvas></gcode>.</li>
+              <li>New multimedia elements: <gcode>&lt;audio></gcode> and <gcode>&lt;video></gcode>.</li>
+              <li>Add new elements to HTML like <gcode>&lt;new>&lt;/new></gcode></li>
+            </ul>
+            <small>For more info
+              <a href="http://www.w3schools.com/html/html5_new_elements.asp">
+              http://www.w3schools.com/html/html5_new_elements.asp
+              </a></small>
+          </section>
+          <section>
+            <p>New Input Types and Attributes</p>
+            <p>INPUT TYPES</p>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8">
+                  <fieldset class="inputs">
+                    <label class="col-sm-3">color</label>
+                    <div class="col-sm-6">
+                      <input class="form-control" type="color" style="height: 35px;" placeholder="color">
+                    </div>
+                  </fieldset>
+                  <fieldset class="inputs">
+                    <label class="col-sm-3">date</label>
+                    <div class="col-sm-6">
+                      <input  class="form-control"type="date" placeholder="date">
+                    </div>
+                  </fieldset>
+                  <fieldset class="inputs">
+                    <form action="#">
+                      <label class="col-sm-3">email</label>
+                      <div class=" col-sm-6">
+                        <div class="input-group">
+                          <input type="email" class="form-control" placeholder="email" required>
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="submit"
+                            style="margin-top: -18px; border: 0; border-left: 1px solid #ccc;">Go!</button>
+                          </span>
+                        </div>
+                      </div>
+                    </form>
+                  </fieldset>
+                  <fieldset class="inputs">
+                    <label class="col-sm-3">month</label>
+                    <div class="col-sm-6">
+                      <input  class="form-control"type="month" placeholder="month">
+                    </div>
+                  </fieldset>
+                  <fieldset class="inputs">
+                    <label class="col-sm-3">number</label>
+                    <div class="col-sm-6">
+                      <input  class="form-control"type="number" placeholder="number">
+                    </div>
+                  </fieldset>
+                  <fieldset class="inputs">
+                    <label class="col-sm-3">range</label>
+                    <div class="col-sm-6">
+                      <input  class="form-control"type="range" placeholder="range">
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <ul class="list">
+                    <li>datetime</li>
+                    <li>datetime-local</li>
+                    <li>search</li>
+                    <li>tel</li>
+                    <li>time</li>
+                    <li>url</li>
+                    <li>week</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <p>New Input Types and Attributes</p>
+            <p>ATTRIBUTES</p>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <fieldset class="inputs">
+                    <form action="#">
+                      <label class="col-sm-5">autofocus</label>
+                      <div class=" col-sm-6">
+                        <div class="input-group">
+                        <input class="form-control" type="text" autofocus="true" required placeholder="autofocus">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="submit"
+                            style="margin-top: -18px; border: 0; border-left: 1px solid #ccc;">Go!</button>
+                          </span>
+                        </div>
+                      </div>
+                    </form>
+                  </fieldset>
+                  <fieldset class="inputs">
+                    <form action="#">
+                      <label class="col-sm-5">autocomplete</label>
+                      <div class=" col-sm-6">
+                        <div class="input-group">
+                        <input class="form-control" type="text" autocomplete="false" required placeholder="autocomplete">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="submit"
+                            style="margin-top: -18px; border: 0; border-left: 1px solid #ccc;">Go!</button>
+                          </span>
+                        </div>
+                      </div>
+                    </form>
+                  </fieldset>
+                  <fieldset class="inputs">
+                    <label class="col-sm-5">list</label>
+                    <div class="col-sm-6">
+                      <input class="form-control" list="browsers">
+                      <datalist id="browsers">
+                        <option value="Internet Explorer">
+                        <option value="Firefox">
+                        <option value="Google Chrome">
+                        <option value="Opera">
+                        <option value="Safari">
+                      </datalist>
+                    </div>
+                  </fieldset>
+                  <fieldset class="inputs">
+                    <form action="#">
+                      <label class="col-sm-5">min&max</label>
+                      <div class=" col-sm-6">
+                        <div class="input-group">
+                        <input class="form-control" type="number" min="5" max="20" step="5"required placeholder="min & max">
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="submit"
+                            style="margin-top: -18px; border: 0; border-left: 1px solid #ccc;">Go!</button>
+                          </span>
+                        </div>
+                      </div>
+                    </form>
+                  </fieldset>
+                  <fieldset class="inputs">
+                    <form action="#">
+                      <label class="col-sm-5">step</label>
+                      <div class=" col-sm-6">
+                        <div class="input-group">
+                        <input class="form-control" type="number" min="5" max="100" step="5" placeholder="step" required>
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="submit"
+                            style="margin-top: -18px; border: 0; border-left: 1px solid #ccc;">Go!</button>
+                          </span>
+                        </div>
+                      </div>
+                    </form>
+                  </fieldset>
+                  <fieldset class="inputs">
+                    <form action="#">
+                      <label class="col-sm-5">multiple</label>
+                      <div class=" col-sm-6">
+                        <input class="form-control" type="file" placeholder="step" multiple required>
+                      </div>
+                    </form>
+                  </fieldset>
+                  <fieldset class="inputs">
+                    <form action="#">
+                      <label class="col-sm-5">pattern</label>
+                      <div class=" col-sm-6">
+                        <div class="input-group">
+                        <input class="form-control" type="text" placeholder="Firstname" pattern="[A-Za-z]" title="Letters ONLY" required>
+                          <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="submit"
+                            style="margin-top: -18px; border: 0; border-left: 1px solid #ccc;">Go!</button>
+                          </span>
+                        </div>
+                      </div>
+                    </form>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <p>New Input Types and Attributes</p>
+            <p>ATTRIBUTES</p>
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+/* form */
+&lt;form action="demo_form.asp" id="form1">
+  First name: &lt;input type="text" name="fname"><br>
+  &lt;button type="submit">Submit&lt;/button>
+&lt;/form>
+
+Last name: &lt;input type="text" name="lname" form="form1">
+</code>
+</pre>
+
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+/* formaction */
+&lt;form action="demo_form.asp" method="get">
+  First name: &lt;input type="text" name="fname"><br>
+  Last name: &lt;input type="text" name="lname"><br>
+  &lt;button type="submit">Submit</button><br>
+  &lt;button type="submit" formaction="demo_admin.asp">Submit as admin&lt;/button>
+&lt;/form>
+</code>
+</pre>
+    </section>
+    <section>
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+/* formenctype */
+&lt;form action="demo_post_enctype.asp" method="post">
+  Name: &lt;input type="text" name="fname" value="Ståle Refsnes">&lt;br>
+  &lt;button type="submit">Submit with character encoding<&lt;button>
+  &lt;utton type="submit" formenctype="text/plain">Submit without character encoding&lt;/button>
+&lt;/form>
+/*
+* application/x-www-form-urlencoded -Default. All characters will be encoded before sent
+* multipart/form-data - No characters are encoded (use this when you are using forms that have a file upload control)
+* text/plain =>	Spaces are converted to "+" symbols, but no characters are encoded
+*/
+</code>
+</pre>
+
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+/* formmethod */
+&lt;form action="demo_form.asp" method="get">
+  First name: &lt;input type="text" name="fname">&lt;br>
+  Last name: &lt;input type="text" name="lname">&lt;br>
+  &lt;button type="submit">Submit&lt;/button>
+  &lt;button type="submit" formmethod="post" formaction="demo_post.asp">Submit using POST&lt;/button>
+&lt;/form>
+</code>
+</pre>
+  </section>
+  <section>
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+/* formnovalidate */
+&lt;form action="demo_form.asp">
+  E-mail: &lt;input type="email" name="userid" required>&lt;br>
+  &lt;input type="submit" value="Submit">&lt;br>
+  &lt;input type="submit" formnovalidate="formnovalidate" value="Submit without validation">
+&lt;/form>
+</code>
+</pre>
+
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+/* formtarget */
+&lt;form action="demo_form.asp" method="get">
+  First name: &lt;input type="text" name="fname">&lt;br>
+  Last name: &lt;input type="text" name="lname">&lt;br>
+  &lt;button type="submit" >Submit&lt;/button>
+  &lt;button type="submit" formtarget="_blank">Submit to a new window&lt;/button>
+&lt;/form>
+</code>
+</pre>
+<small>Credits to : http://www.w3schools.com/</small>
+       </section>
+     </section>
+  <section>
+    <section>
+      <h3>CSS - The Language of Web Design</h3>
+    </section>
+
+    <section>
+      <p>The page with CSS vs without CSS</p>
+      <a href="http://localhost:8002" target="_blank">Click</a>
+    </section>
+
+    <section>
+      <h3>3 ways to use CSS in the page</h3>
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+/* Inline */
+&lt;h1 style="color: red">Inline CSS&lt;/h1>
+</code>
+</pre>
+
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+/* Internal */
+&lt;style>
+  h1 { color: red; }
+&lt;/style>
+</code>
+</pre>
+
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+/* External */
+&lt;link rel="stylesheet" type="text/css" href="mystyle.css">
+
+/* We recommend to use external CSS so that the HTML is neat */
+</code>
+</pre>
+    </section>
+
+    <section>
+      <img src="assets/css3.jpg" alt="">
+    </section>
+
+    <section>
+      <h3>What is CSS3 ?</h3>
+    </section>
+
+    <section>
+      <p>CSS3 is the latest standard for CSS.</p>
+      <p>CSS3 is completely backwards-compatible with earlier versions of CSS.</p>
+    </section>
+
+    <section>
+      <h3>Top 10 New Features in CSS 3 </h3>
+      <small>http://www.webreference.com/authoring/css3/index.html</small>
+    </section>
+
+    <section>
+      <h3>1. Selectors</h3>
+      <p>CSS 3 introduces some new selectors. Using these selectors you can choose DOM elements based on their attributes.</p>
+      <ul class="list">
+        <li><gcode>[attr=val]</gcode> - matches a DOM element with the attribute attr and a value with val</li>
+        <li><gcode>[attr^=val]</gcode> - matches a DOM element with the attribute attr and a value starting with val</li>
+        <li><gcode>[attr$=val]</gcode> - matches a DOM element with the attribute attr and a value ending with the suffix val</li>
+        <li><gcode>[attr*=val]</gcode> - matches a DOM element with the attribute attr and a value containing the substring</li>
+      </ul>
+<pre>
+<code class="css" contenteditable="" data-trim="" style="max-height: 500px;">
+/* CSS Styles */
+div[data-toggle="tooltip"] { color: black; }
+p[title^="car"] { color: red; }
+img[src*="birth"] { border:3px solid green; }
+</code>
+</pre>
+    </section>
+
+    <section>
+      <h3>2. Rounded Corners</h3>
+      <p>CSS 3 introduces <gcode>border-radius</gcode> which gives you the same rounded-corner effect.</p>
+<pre>
+<code class="css" contenteditable="" data-trim="" style="max-height: 500px;">
+/* HTML */
+&lt;div class="box">&lt;/div>
+
+/* CSS Styles */
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  border-radius: 10px; // shorthand method applies on all corners
+}
+
+/* Specific to a certaing corner */
+* border-bottom-left-radius || border-bottom-right-radius
+* border-top-left-radius || border-top-right-radius
+</code>
+</pre>
+    </section>
+
+  <section>
+    <h3>3. Border Image</h3>
+    <p>CSS 3 introduces <gcode>border-image</gcode>  allows you to specify an image to display instead of a plain solid-colored border.</p>
+<pre>
+<code class="css" contenteditable="" data-trim="" style="max-height: 500px;">
+/* HTML */
+&lt;div class="box">&lt;/div>
+
+/* CSS Styles */
+.box {
+  width: 100px;
+  height: 100px;
+  border: 10px solid transparent;
+  border-image: url(http://www.w3schools.com/cssref/border.png) 20% stretch; // round
+}
+</code>
+</pre>
+  </section>
+
+
+  <section>
+    <h3>4. Box Shadow</h3>
+    <p>CSS 3 introduces <gcode>box-shadow</gcode> allows you to create a drop shadow for an element.</p>
+<pre>
+<code class="css" contenteditable="" data-trim="" style="max-height: 500px;">
+/* HTML */
+&lt;div class="box">&lt;/div>
+
+/* CSS Styles */
+.box {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 2px 5px 1px #333; // h-shadow, v-shadow, blur, spread, color
+}
+</code>
+</pre>
+  </section>
+
+  <section>
+    <h3>5. Text Shadow</h3>
+    <p>CSS 3 introduces <gcode>text-shadow</gcode> allows you to add drop shadows to the text on a webpage</p>
+<pre>
+<code class="css" contenteditable="" data-trim="" style="max-height: 500px;">
+/* HTML */
+&lt;h1>WEB Development<&lt;h1>
+
+/* CSS Styles */
+h1 {
+  text-shadow: #333 2px 3px 4px; // h-shadow, v-shadow, blur
+}
+</code>
+</pre>
+  </section>
+
+  <section>
+    <h3>6. Gradient</h3>
+    <p>Gradient effect is a sleek Web design tool, it can be a drain on resources if not implemented correctly using current CSS techniques.</p>
+<pre>
+<code class="css" contenteditable="" data-trim="" style="max-height: 500px;">
+/* HTML */
+&lt;div class="box">&lt;/div>
+
+/* CSS Styles */
+.box {
+  height: 100px;
+  width: 200px;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#333, #ffb31d); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#333, #ffb31d); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#333, #ffb31d); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#333, #ffb31d); /* Standard syntax (must be last) */
+}
+
+/* http://www.w3schools.com/css/css3_gradients.asp */
+</code>
+</pre>
+  </section>
+
+  <section>
+    <h3>7. RGBA: Color, Now with Opacity</h3>
+    <p>The RGB property in CSS is used to set colors for different elements. CSS 3 introduces a modification and added opacity manipulation to this property. RGB has been transformed to RGBA (Red Green Blue Alpha channels), which simplifies how you control the opacity of elements.</p>
+<pre>
+<code class="css" contenteditable="" data-trim="" style="max-height: 500px;">
+/* HTML */
+&lt;div class="box">&lt;/div>
+
+/* CSS Styles */
+.box {
+  height: 100px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* http://www.w3schools.com/css/css3_gradients.asp */
+</code>
+</pre>
+  </section>
+
+
+  <section>
+    <h3>8. Transform (Element Rotation)</h3>
+    <p>CSS 3 introduces <gcode>transform</gcode> which enables rotating Web elements on a webpage.</p>
+<pre>
+<code class="css" contenteditable="" data-trim="" style="max-height: 500px;">
+/* HTML */
+&lt;div class="box">&lt;/div>
+
+/* CSS Styles */
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: #333;
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+/* http://www.w3schools.com/css/css3_2dtransforms.asp
+ http://www.w3schools.com/css/css3_3dtransforms.asp */
+</code>
+</pre>
+  </section>
+
+  <section>
+    <h3>9. Multi-column Layout</h3>
+    <p>The CSS3 multi-column layout allows easy definition of multiple columns of text - just like in newspapers.</p>
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+/* HTML */
+<div class="newspaper">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+lobortis nisl ut aliquip ex ea commodo consequat.
+</div>
+</code>
+</pre>
+
+<pre>
+<code class="css" contenteditable="" data-trim="" style="max-height: 500px;">
+/* CSS Styles */
+.newspaper {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+}
+
+/* http://www.w3schools.com/css/css3_multiple_columns.asp */
+</code>
+</pre>
+  </section>
+
+  <section>
+    <h3>10. Web Fonts</h3>
+    <p>In the CSS3 <gcode>@font-face</gcode> rule you must first define a name for the font (e.g. myFirstFont), and then point to the font file.</p>
+<pre>
+<code class="css" contenteditable="" data-trim="" style="max-height: 500px;">
+/* CSS Styles */
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+}
+
+div {
+  font-family: myFirstFont;
+}
+
+/* http://www.w3schools.com/css/css3_fonts.asp */
+</code>
+</pre>
+  </section>
+
+  <section>
+<p>Google Fonts</p>
+<pre>
+<code class="html" contenteditable="" data-trim="" style="max-height: 500px;">
+&lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+/* CSS */
+font-family: 'Open Sans', sans-serif;
+</code>
+</pre>
+  </section>
+
+<section>
+  <h1>Thanks...</h1>
+  <h3>Next: Javascript</h3>
+</section>
+
+  </section>
+     </div><!-- end of .slides -->
+   </div><!-- end of .reveal -->
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
